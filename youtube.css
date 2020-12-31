@@ -1,0 +1,497 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+main{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: .3fr .2fr 1fr 1fr;
+    grid-template-areas: 
+    "navbar navbar navbar navbar navbar"
+    "sidebar before before  before before"
+    "sidebar content1 content1 content1 content1"
+    "sidebar  . . . ."
+    ;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    /* min-width: 30vw; */
+    font-family: sans-serif;
+    
+    
+    
+}
+
+
+
+main::-webkit-scrollbar{
+  
+    display: none;
+}
+
+
+
+.navbar{
+    position: sticky;
+    top: 0;
+    width: 100vw;
+    height: 100%;
+    grid-area: navbar;
+    background-color: #202020;
+    z-index: 1;
+    /****/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    box-sizing: border-box;
+   margin-bottom: 0;
+    
+}
+.sidebar{
+    
+   
+    height: 100vh;
+    grid-area: sidebar;
+    background-color: #212121;
+    overflow-y: scroll;
+    position: sticky;
+    top: 12vh;
+    left: 0vh;
+   
+  
+}
+ .sidebar::-webkit-scrollbar {
+    width: 5px;
+   
+    
+}
+.sidebar::-webkit-scrollbar-thumb{
+    background-color: black;
+    border-radius: 20px;
+    height: 20px;
+}
+.sidebar::-webkit-scrollbar-track{
+    background-color: grey;
+}
+
+.before{
+    grid-area: before;
+    background-color: #313131;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* flex-wrap: nowrap; */
+    position: sticky;
+    top: 12vh;
+    z-index: 10;
+    
+}
+
+
+
+.content1{
+    overflow-y: scroll;
+    width: 100vw;
+    height: 230%;
+    grid-area: content1;
+    background-color: #181818;
+    display:grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    /* grid-template-rows: repeat(auto-fit,150px); */
+    grid-row-gap: 10px;
+    
+    
+}
+.content1::-webkit-scrollbar{
+    width: 5px;
+}
+.content1::-webkit-scrollbar-thumb{
+    background-color: black;
+    border-radius: 20px;
+    height: 20px;
+}
+.content1::-webkit-scrollbar-track{
+    background-color: grey;
+}
+/**********************************************************************/
+
+.nav-child1{
+    width: 15vw;
+    height: 80%;
+    
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+.nav-child1 div{
+    width: 100px;
+    height: 23px;
+    
+}
+.nav-child1>span>i{
+    font-size: 20px;
+    cursor: pointer;
+
+}
+.nav-child1 >a>div>img{
+    width: 100%;
+    
+}
+.nav-child2{
+    
+    display: flex;
+}
+.nav-child2>input{
+    background-color: black;
+    color: white;
+    font-size: 18px;
+    padding: 3px;
+    width:40vw;
+    height: 4vh;
+    margin-right: 0;
+    border: none;
+    outline: none;
+}
+.nav-child2>span{
+    text-align: center;
+    padding: 10px 20px ;
+    background-color:#313131;
+    margin-left: 0;
+    outline: none;
+    border: none;
+    font-size: 15px;
+    height: 1.9vh;
+    cursor: pointer;
+    color: grey;
+
+}
+
+.nav-child3>span{
+    font-size: 20px;
+    padding: 1vh;
+    cursor: pointer;
+    color: white;
+}
+
+.nav-child3>span>sup{
+    background-color: red;
+    border-radius: 50%;
+    font-size: 10px;
+    margin-left: -10px;
+    padding: 2px;
+    color: white;
+
+}
+
+/***************************SIDE BAR*******************************************/
+
+.sidebar-child1{
+    margin-left: 0;
+}
+.sidebar-child1>ul{
+ list-style-type: none;
+ left: 0;
+ padding: 0;
+}
+.sidebar-child1>ul>li:nth-child(1){
+    background-color:  #383838;
+}
+.sidebar-child1>ul>li{
+    padding: 10px;
+    cursor: pointer;
+    font-size: 15px;
+    color: white;
+}
+
+.sidebar-child1>ul>li>span{
+    padding: 5px;
+}
+
+.sidebar-child1>ul>li:hover{
+    background-color: grey;
+}
+
+
+.sidebar-child2{
+    margin-left: 0;
+}
+.sidebar-child2>ul{
+ list-style-type: none;
+ left: 0;
+ padding: 0;
+}
+.sidebar-child2>ul>li{
+    padding: 10px;
+    cursor: pointer;
+    font-size: 15px;
+    color: white;
+}
+
+.sidebar-child2>ul>li>span{
+    padding: 5px;
+}
+
+.sidebar-child2>ul>li:hover{
+    background-color: grey;
+}
+
+/***/
+
+
+.sidebar-child3{
+    margin-left: 0;
+}
+.sidebar-child3>ul{
+ list-style-type: none;
+ left: 0;
+ padding: 0;
+ color: white;
+}
+.sidebar-child3>ul>li{
+    padding: 10px;
+    cursor: pointer;
+    font-size: 15px;
+    color: white;
+}
+
+.sidebar-child3>ul>li>span{
+    padding: 5px;
+}
+
+.sidebar-child3>ul>li:hover{
+    background-color: grey;
+}
+/**/
+
+
+.sidebar-child4{
+    margin-left: 0;
+}
+.sidebar-child4>ul{
+ list-style-type: none;
+ left: 0;
+ padding: 0;
+ color: white;
+}
+.sidebar-child4>ul>li{
+    padding: 10px;
+    cursor: pointer;
+    font-size: 15px;
+    color: white;
+}
+
+.sidebar-child4>ul>li>span{
+    padding: 5px;
+}
+
+.sidebar-child4>ul>li:hover{
+    background-color: grey;
+}
+/*****/
+
+
+.sidebar-child5{
+    margin-left: 0;
+}
+.sidebar-child5>ul{
+ list-style-type: none;
+ left: 0;
+ padding: 0;
+ color: white;
+}
+.sidebar-child5>ul>li{
+    padding: 10px;
+    cursor: pointer;
+    font-size: 15px;
+    color: white;
+}
+
+.sidebar-child5>ul>li>span{
+    padding: 5px;
+}
+
+.sidebar-child5>ul>li:hover{
+    background-color: grey;
+}
+/********************Content1*******************/
+
+.content1>div{
+    
+    height: 300px;
+    position: relative;
+    margin: 10px;
+    cursor: pointer;
+
+}
+
+.content1>div>img{
+    width: 100%;
+    height: 70%;
+}
+.bottom{
+    width: 100%;
+    height: 30%;
+    margin-top: 0%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.bottom>div{
+    
+   
+    height: 100%;
+
+}
+.bottom>div:nth-child(1){
+    flex-grow: .5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bottom>div:nth-child(2){
+    flex-grow: 2;
+    color: whitesmoke;
+    
+    /* flex-direction: column; */
+    
+    
+}
+.bottom>div:nth-child(3){
+    flex-grow: .5;
+    font-size: 1.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: grey;
+}
+.hide{
+    width: 10%;
+    height: 90%;
+   
+    position: absolute;
+    top: 5%;
+    right: 1%;
+    text-align: center;
+    display: none;
+}
+.hide>span{
+    padding: 5px;
+    background-color: black;
+    opacity: .7;
+    color: cornsilk;
+    cursor: pointer;
+    display: block;
+    margin-top: 10px;
+}
+.hide>span:nth-child(3){
+    bottom: 5%;
+    left: 30%;
+    position: absolute;
+    background-color: transparent;
+}
+.minute{
+    position: absolute;
+    top: 60%;
+    right: 1%;
+    color: bisque;
+    padding: 5px;
+    background-color: black;
+    opacity: .7;
+    font-size: .8em;
+}
+
+/*************************************************/
+.before div{
+    border: 1px solid whitesmoke;
+    color: whitesmoke;
+    padding: 5px;
+    border-radius:10px;
+    margin: 0 10px;
+    /* width: inherit; */
+    /* box-sizing: inherit; */
+    height: 30%;
+    cursor: pointer;
+    word-break: unset;
+}
+
+
+.content1>div:hover .hide{
+   display: block;
+}
+
+
+
+
+/***************************** MEDIA TAGS*******************************************/
+@media  only screen and (max-width:500px){
+  main{
+         display: grid;
+         grid-template-rows: .3fr .3fr 3fr;
+         grid-template-areas: 
+         "navbar"
+         "before"
+         "content1"
+         
+         ;
+         overflow-y: scroll;
+  }
+  .sidebar{
+      display:none;
+  }
+  .nav-child2{
+      display: none;
+  }
+  .before{
+      position: sticky;
+      top: 5vh;
+  }
+  .content1{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+  }
+  .content1>div{
+      width: 350px;
+      height: 450px;
+  }
+  .content1>div>img{
+      width: 100%;
+      height: 70%;
+  }
+  
+}
+@media only screen and ( min-width:501px) and (max-width:900px){
+    main{
+        display: grid;
+        grid-template-columns: .5fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: .5fr .3fr 1fr 1fr;
+        grid-template-areas: 
+        "navbar navbar navbar navbar navbar"
+        "sidebar before before  before before"
+        "sidebar content1 content1 content1 content1"
+        "sidebar  . . . ."
+        ;
+        
+    }
+    .sidebar{
+        background-color:  #212121;
+    }
+    .words{
+        display: none;
+    }
+   ul{
+       margin-left: 20px;
+   }
+   .sidebar-child1>ul>li:nth-child(1){
+       background-color: transparent;
+   }
+}
